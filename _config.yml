@@ -16,10 +16,11 @@ timezone: Asia/Seoul
 
 title: Security Lab by eito
 
-tagline: 정보 보안 / CTF / CS 학습 기록
+tagline: サイバーセキュリティ・情報科学・AI
 
-description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+description: >-
+  コンピューター・AI工学部に通っている韓国の大学生です。
+  セキュリティに興味を持って勉強しています。
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
