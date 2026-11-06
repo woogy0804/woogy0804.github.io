@@ -1,0 +1,11 @@
+{% capture search_text %}{{ include.post.title }} {{ include.post.excerpt | strip_html }} {% for category in include.post.categories %}{{ category }} {% endfor %}{% for tag in include.post.tags %}{{ tag }} {% endfor %}{% endcapture %}
+<article class="post-row" data-search="{{ search_text | escape }}">
+  <span class="row-number">{{ include.number }}</span>
+  <div>
+    <a class="row-title" href="{{ include.post.url | relative_url }}">{{ include.post.title | escape }}</a>
+    {% if include.post.excerpt %}<p class="row-excerpt">{{ include.post.excerpt | strip_html | truncate: 170 | escape }}</p>{% endif %}
+    {% if include.post.tags.size > 0 %}<div class="tag-list" aria-label="Tags">{% for tag in include.post.tags %}<a class="tag" href="{{ '/tags/' | relative_url }}#{{ tag | slugify: 'raw' }}">#{{ tag | escape }}</a>{% endfor %}</div>{% endif %}
+  </div>
+  <div class="row-meta"><time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: '%Y.%m.%d' }}</time>{% for category in include.post.categories %}{% assign category_data = site.data.eito_categories | where: 'name', category | first %}<a href="{{ '/categories/' | relative_url }}#{{ category_data.id | default: category | slugify: 'raw' }}">{{ category | escape }}</a>{% endfor %}</div>
+  <span class="row-arrow" aria-hidden="true">↗</span>
+</article>

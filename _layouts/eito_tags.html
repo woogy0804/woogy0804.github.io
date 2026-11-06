@@ -1,0 +1,9 @@
+---
+layout: eito_base
+---
+<main class="page shell" id="main">
+  <div class="page-head"><div><div class="eyebrow">EITO / INDEX</div><h1>Tags</h1></div><p class="page-intro" data-ko="태그별로 기록을 찾아보세요." data-ja="タグ別に記事を探せます。">태그별로 기록을 찾아보세요.</p></div>
+  {% assign sorted_tags = site.tags | sort %}
+  <nav class="category-index" aria-label="Tag index">{% for tag in sorted_tags %}<a href="#{{ tag[0] | slugify: 'raw' }}">#{{ tag[0] | escape }} <small>({{ tag[1].size }})</small></a>{% endfor %}</nav>
+  <div class="section-list">{% for tag in sorted_tags %}<section class="tag-group" id="{{ tag[0] | slugify: 'raw' }}"><h2 class="section-title">#{{ tag[0] | escape }} <small>{{ tag[1].size }} POSTS</small></h2>{% for post in tag[1] %}<div class="compact-row"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time><span aria-hidden="true">↗</span></div>{% endfor %}</section>{% else %}<p class="empty" data-ko="아직 등록된 태그가 없습니다." data-ja="登録されたタグはまだありません。">아직 등록된 태그가 없습니다.</p>{% endfor %}</div>
+</main>

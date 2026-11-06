@@ -1,5 +1,6 @@
 ---
-layout: tags
-icon: fas fa-tags
-order: 2
+layout: eito_tags
+title: Tags
+section: tags
+permalink: /tags/
 ---

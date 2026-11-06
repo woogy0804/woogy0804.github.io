@@ -1,0 +1,11 @@
+---
+layout: eito_base
+---
+<main class="page shell" id="main"><article class="post-article">
+  <a class="post-back" href="{{ '/' | relative_url }}">← Archive</a>
+  <div class="eyebrow">EITO / SECURITY LAB</div>
+  <h1>{{ page.title | escape }}</h1>
+  <div class="post-meta-line"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time>{% for category in page.categories %}{% assign category_data = site.data.eito_categories | where: 'name', category | first %}<a href="{{ '/categories/' | relative_url }}#{{ category_data.id | default: category | slugify: 'raw' }}">{{ category | escape }}</a>{% endfor %}{% for tag in page.tags %}<a href="{{ '/tags/' | relative_url }}#{{ tag | slugify: 'raw' }}">#{{ tag | escape }}</a>{% endfor %}</div>
+  <div class="post-content">{{ content }}</div>
+  <div class="post-end"><a class="post-back" href="{{ '/' | relative_url }}">← Archive</a></div>
+</article></main>

@@ -1,13 +1,11 @@
 ---
-# the default layout is 'page'
-icon: fas fa-info-circle
-order: 4
+layout: eito_page
+title: About
+section: about
+permalink: /about/
 ---
 
-> # About
+정보 보안을 공부하는 Eito입니다. 컴퓨터 공학, 개발, CTF 풀이, 보안 연구와 관련된 포스트를 올리고 있습니다.
+サイバーセキュリティを学んでいますEitoと申します。情報工学、ソフトウェア開発、CTFのWrite-Upやセキュリティの研究などに関する記事をアップロードします。
 
-안녕하세요. 정보 보안을 공부하는 eito입니다.
-이 블로그에는 보안 관련 지식, CTF 풀이, 개발 기록, 기술 문서와 논문을
-제가 이해한 방식으로 정리합니다.
-
-GitHub: https://github.com/woogy0804
+[GitHub](https://github.com/woogy0804)

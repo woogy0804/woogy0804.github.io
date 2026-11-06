@@ -1,0 +1,11 @@
+---
+layout: eito_base
+---
+<main class="page shell" id="main">
+  <div class="page-head"><div><div class="eyebrow">EITO / SECURITY LAB</div><h1>Archive</h1></div><p class="page-intro" data-ko="보안과 컴퓨터공학을 공부하며 남긴 기록. 관심 있는 주제나 태그로 찾아보세요." data-ja="セキュリティとコンピュータサイエンスを学びながら残した記録。テーマやタグから探せます。">보안과 컴퓨터공학을 공부하며 남긴 기록. 관심 있는 주제나 태그로 찾아보세요.</p></div>
+  <nav class="category-index" aria-label="Post categories">{% for category in site.data.eito_categories %}<a href="{{ '/categories/' | relative_url }}#{{ category.id }}" data-ko="{{ category.name | escape }}" data-ja="{{ category.name_ja | escape }}">{{ category.name }}</a>{% endfor %}</nav>
+  <label class="search-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><input id="post-search" type="search" autocomplete="off" aria-label="Search posts" placeholder="Search posts / tags"></label>
+  <div class="list-head"><span>NO.</span><span>ARTICLE</span><span>DATE / CATEGORY</span><span></span></div>
+  <div id="post-list">{% for post in site.posts %}{% include eito_post_row.html post=post number=forloop.index %}{% else %}<p class="empty" data-ko="아직 게시된 글이 없습니다." data-ja="公開された記事はまだありません。">아직 게시된 글이 없습니다.</p>{% endfor %}</div>
+  <p class="search-empty" id="search-empty" hidden data-ko="검색 결과가 없습니다." data-ja="検索結果がありません。">검색 결과가 없습니다.</p>
+</main>

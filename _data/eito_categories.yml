@@ -1,0 +1,18 @@
+- id: development
+  name: 개발
+  name_ja: 開発
+- id: ctf
+  name: CTF/Wargame
+  name_ja: CTF/Wargame
+- id: bug-bounty
+  name: Bug Bounty
+  name_ja: Bug Bounty
+- id: writing
+  name: 블로그/기술문서
+  name_ja: ブログ/技術文書
+- id: research
+  name: 논문/컨퍼런스
+  name_ja: 論文/カンファレンス
+- id: milestones
+  name: 공모전/자격증
+  name_ja: コンテスト/資格

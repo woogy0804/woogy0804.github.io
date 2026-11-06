@@ -1,0 +1,8 @@
+---
+layout: eito_base
+---
+<main class="page shell" id="main">
+  <div class="page-head"><div><div class="eyebrow">EITO / INDEX</div><h1>Categories</h1></div><p class="page-intro" data-ko="관심 분야별로 정리한 기록입니다." data-ja="分野別に整理した記録です。">관심 분야별로 정리한 기록입니다.</p></div>
+  <nav class="category-index" aria-label="Category index">{% for category in site.data.eito_categories %}<a href="#{{ category.id }}" data-ko="{{ category.name | escape }}" data-ja="{{ category.name_ja | escape }}">{{ category.name }}</a>{% endfor %}</nav>
+  <div class="section-list">{% for category in site.data.eito_categories %}{% assign category_posts = site.categories[category.name] %}<section id="{{ category.id }}"><h2 class="section-title"><span data-ko="{{ category.name | escape }}" data-ja="{{ category.name_ja | escape }}">{{ category.name }}</span><small>{{ category_posts.size | default: 0 }} POSTS</small></h2>{% for post in category_posts %}<div class="compact-row"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: '%Y.%m.%d' }}</time><span aria-hidden="true">↗</span></div>{% else %}<p class="empty" data-ko="아직 등록된 글이 없습니다." data-ja="公開された記事はまだありません。">아직 등록된 글이 없습니다.</p>{% endfor %}</section>{% endfor %}</div>
+</main>
