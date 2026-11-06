@@ -117,3 +117,37 @@ a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(-
 @media(max-width:1000px){.shell{width:calc(100% - 54px)}.main-nav{display:none}.page-head{grid-template-columns:1fr;gap:27px}.eyebrow{margin-bottom:28px}.menu-content{width:calc(100% - 54px)}}
 @media(max-width:680px){.shell{width:calc(100% - 36px)}.site-header{height:72px}.brand-name{font-size:31px}.brand-sub{font-size:8px}.header-right{gap:19px}.lang{font-size:14px}.menu-toggle{width:42px;gap:11px}.menu-content{width:calc(100% - 36px);padding-top:135px}.menu-intro{margin-bottom:55px}.menu-columns{grid-template-columns:1fr;gap:65px}.menu-categories a{font-size:27px}.page{padding-top:58px;padding-bottom:90px}.page h1{font-size:clamp(62px,16vw,92px)}.page-intro{font-size:14px}.category-index{gap:10px 17px;margin-top:39px;font-size:12px}.list-head{grid-template-columns:36px 1fr 20px;gap:8px}.list-head span:nth-child(3){display:none}.post-row{grid-template-columns:32px minmax(0,1fr) 22px;gap:8px;min-height:170px;padding:27px 0}.row-number{font-size:10px}.row-title{font-size:clamp(25px,7vw,36px)}.row-excerpt{margin-top:12px;font-size:12px}.row-meta{grid-column:2;grid-row:2;flex-direction:row;gap:6px 16px;padding-top:0;font-size:11px}.row-meta time{font-size:10px}.row-arrow{grid-column:3;grid-row:1;font-size:21px}.tag-list{margin-top:12px}.search-wrap{width:100%}.section-title{margin-top:60px}.compact-row{grid-template-columns:1fr 75px 18px}.compact-row time{font-size:9px}.post-back{margin-bottom:50px}.post-article h1{font-size:clamp(42px,11vw,66px)}.post-content{font-size:15px}.post-content h2{font-size:27px}.post-content h3{font-size:23px}.about-body{margin-top:70px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 38px 0 46px;
+}
+
+.footer-inner,
+.site-footer nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.footer-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.footer-identity small,
+.site-footer nav {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.site-footer a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+@media (max-width: 680px) {
+  .footer-inner {
+    flex-direction: column;
+  }
+}
