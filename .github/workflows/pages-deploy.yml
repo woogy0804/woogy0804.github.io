@@ -52,9 +52,20 @@ jobs:
 
       - name: Test site
         run: |
+          set +e
           bundle exec htmlproofer _site \
-            \-\-disable-external \
-            \-\-ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+            --disable-external \
+            --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/" \
+            2>&1 | tee htmlproofer.log
+          result=${PIPESTATUS[0]}
+          if [ "$result" -ne 0 ]; then
+            message=$(tail -n 80 htmlproofer.log)
+            message=${message//'%'/'%25'}
+            message=${message//$'\r'/'%0D'}
+            message=${message//$'\n'/'%0A'}
+            echo "::error title=HTMLProofer failure::$message"
+          fi
+          exit "$result"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v5
