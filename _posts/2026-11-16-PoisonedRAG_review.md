@@ -2,7 +2,7 @@
 layout: post
 title: "RAG가 참고하는 지식이 조작된다면? — PoisonedRAG 리뷰"
 date: 2026-11-16 00:00:00 +0900
-categories: [research]
+categories: [논문/컨퍼런스]
 tags: [paper-review, RAG, AI, LLM, PoisonedRAG, 논문리뷰]
 ---
 # RAG가 참고하는 지식이 조작된다면? — PoisonedRAG 논문 리뷰
