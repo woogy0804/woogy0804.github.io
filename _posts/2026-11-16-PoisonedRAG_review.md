@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: eito-post
 title: "RAG가 참고하는 지식이 조작된다면? — PoisonedRAG 리뷰"
 date: 2026-11-16 00:00:00 +0900
 categories: [논문/컨퍼런스]
