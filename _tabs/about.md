@@ -14,12 +14,12 @@ permalink: /about/
 情報工学、ソフトウェア開発、CTFのWrite-Upやセキュリティの研究などに関する記事をアップロードします。
 
 
-## 현재 소속
+## 소속
 국립부경대학교 컴퓨터인공지능공학부
 
-2026-2 정보보안 동아리 CERT-IS 대내부
+2026-2 정보보안 동아리 CERT-IS
 
 ## 관심분야
-Security, Web, Cloud, Infra, ~~Anime, Vocaloid~~
+Security, Vulnerability, Web, Cloud, Infra
 
 [GitHub](https://github.com/woogy0804)
